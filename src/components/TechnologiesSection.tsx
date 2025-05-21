@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Database, Server, Shield, Robot } from 'lucide-react';
+import { Code, Database, Server, Shield, Bot, Activity } from 'lucide-react';
 
 const TechnologiesSection = () => {
   const technologies = [
@@ -16,7 +16,7 @@ const TechnologiesSection = () => {
     },
     { 
       name: "API da OpenAI", 
-      icon: <Robot className="h-10 w-10 text-secondary mb-4" />,
+      icon: <Bot className="h-10 w-10 text-secondary mb-4" />,
       description: "Motor de IA para tomada de decisões"
     },
     { 

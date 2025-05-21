@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Ai, Database, Shield } from 'lucide-react';
+import { Bot, Database, Shield } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -14,7 +14,7 @@ const AboutSection = () => {
         <div className="card-gradient rounded-lg p-6 md:p-8 mb-8">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <div className="flex-shrink-0 flex justify-center items-center w-16 h-16 rounded-full bg-primary/20 text-secondary">
-              <Ai size={32} />
+              <Bot size={32} />
             </div>
             <div>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
