@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, ArrowDown } from 'lucide-react';
+import { Bird, ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -21,8 +21,12 @@ const Hero = () => {
       
       {/* Main Hero Content */}
       <div className="text-center z-10 max-w-3xl">
-        <div className="flex justify-center mb-6">
-          <Shield className="h-20 w-20 text-secondary animate-float" />
+        <div className="flex justify-center mb-6 relative">
+          <div className="urutau-logo-container relative">
+            <Bird className="h-20 w-20 text-secondary animate-float" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-secondary/5 animate-pulse-slow"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-primary/5 animate-pulse-slower"></div>
+          </div>
         </div>
         <h1 className="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl text-white mb-6">
           <span className="text-secondary">Urutau</span> Security
