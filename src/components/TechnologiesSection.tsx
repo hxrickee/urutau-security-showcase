@@ -5,29 +5,34 @@ import { Code, Database, Server, Shield, Bot, Activity } from 'lucide-react';
 const TechnologiesSection = () => {
   const technologies = [
     { 
-      name: "Python", 
+      name: "Backend", 
       icon: <Code className="h-10 w-10 text-secondary mb-4" />,
-      description: "Linguagem base para o desenvolvimento da ferramenta"
+      description: "Python, Django REST Framework, Docker, Lambda"
     },
     { 
-      name: "Docker", 
+      name: "Infraestrutura", 
       icon: <Server className="h-10 w-10 text-secondary mb-4" />,
-      description: "Containerização para ambientes isolados"
+      description: "AWS (ECS, Fargate, S3, RDS), Terraform"
     },
     { 
-      name: "API da OpenAI", 
+      name: "Inteligência Artificial", 
       icon: <Bot className="h-10 w-10 text-secondary mb-4" />,
-      description: "Motor de IA para tomada de decisões"
+      description: "API da OpenAI (GPT-4), Classificação de Vulnerabilidades"
     },
     { 
-      name: "LinPEAS / BeRoot", 
+      name: "Ferramentas de Segurança", 
       icon: <Shield className="h-10 w-10 text-secondary mb-4" />,
-      description: "Ferramentas para escalada de privilégios"
+      description: "LinPEAS, BeRoot, Sherlock, Scripts customizados"
     },
     { 
-      name: "PwnTools", 
+      name: "Frontend", 
       icon: <Database className="h-10 w-10 text-secondary mb-4" />,
-      description: "Framework para exploração"
+      description: "React.js, Tailwind CSS, Dashboards interativos"
+    },
+    { 
+      name: "Monitoramento", 
+      icon: <Activity className="h-10 w-10 text-secondary mb-4" />,
+      description: "CloudWatch, OpenSearch, Redis Cache"
     }
   ];
 
@@ -37,7 +42,7 @@ const TechnologiesSection = () => {
         {/* Background glow */}
         <div className="absolute top-1/2 right-1/4 -z-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
         
-        <h2 className="section-title">Tecnologias Utilizadas</h2>
+        <h2 className="section-title">Stack Tecnológico</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {technologies.map((tech, index) => (

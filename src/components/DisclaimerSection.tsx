@@ -20,17 +20,35 @@ const DisclaimerSection = () => {
               Uso Responsável
             </h3>
             
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-lg leading-relaxed text-muted-foreground mb-4">
               Esta ferramenta deve ser usada <span className="text-white font-medium">somente em ambientes controlados</span> e com 
               <span className="text-white font-medium"> permissão explícita</span>. Nunca utilize em sistemas reais sem autorização. 
               O uso indevido é crime e pode gerar consequências legais.
             </p>
             
-            <div className="mt-8 p-4 bg-muted rounded-lg border border-border">
+            <div className="mt-4 p-4 bg-muted rounded-lg border border-border mb-4">
               <p className="text-muted-foreground italic">
                 "O Urutau Security foi desenvolvido exclusivamente para fins educacionais, de pesquisa 
                 e para uso por profissionais de segurança em ambientes autorizados."
               </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-4">
+              <div className="bg-muted/50 p-4 rounded-lg">
+                <h4 className="font-medium text-white mb-2">Conformidade Legal</h4>
+                <p className="text-sm text-muted-foreground">
+                  O uso desta ferramenta deve observar as leis de segurança cibernética
+                  e proteção de dados aplicáveis, incluindo LGPD e GDPR quando relevante.
+                </p>
+              </div>
+              
+              <div className="bg-muted/50 p-4 rounded-lg">
+                <h4 className="font-medium text-white mb-2">Escopo de Uso</h4>
+                <p className="text-sm text-muted-foreground">
+                  Todas as atividades de teste devem ser limitadas ao escopo contratado
+                  e documentadas formalmente antes da execução.
+                </p>
+              </div>
             </div>
           </div>
         </div>

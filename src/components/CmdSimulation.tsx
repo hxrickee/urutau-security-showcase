@@ -9,22 +9,32 @@ const CmdSimulation = () => {
 
   // Texto para simulação do terminal
   const fullText = `
-> python urutau_security.py --target 192.168.1.10
-[*] Urutau Security - Inicializando...
-[*] Conectando à API da OpenAI...
-[+] Conexão estabelecida!
-[*] Escaneando o alvo 192.168.1.10...
-[+] Portas abertas: 22, 80, 3306
-[*] Analisando informações do sistema...
-[+] Sistema identificado: Linux 5.4.0
-[*] Detectando vulnerabilidades conhecidas...
-[+] Vulnerabilidade encontrada: CVE-2021-4034
-[*] Executando exploração...
-[+] Acesso com privilégios elevados obtido!
-[*] Buscando escalação de privilégios...
-[+] root@192.168.1.10:~# id
-uid=0(root) gid=0(root) groups=0(root)
-[*] Missão completa. Todos os objetivos alcançados.
+> ./urutau-cli.py --target 192.168.1.10 --scan comprehensive
+[*] Urutau Security Platform v1.2.0 - Inicializando...
+[*] Verificando dependências... OK
+[*] Conectando à API da OpenAI... Conectado
+[+] Token JWT autenticado com sucesso
+[*] Provisionando container Docker para análise isolada...
+[+] Container provisionado: urutau-scan-63d12f
+[*] Executando varredura inicial no alvo 192.168.1.10...
+[+] Host ativo. Portas abertas: 22, 80, 3306, 8080
+[*] Iniciando LinPEAS no ambiente de container...
+[+] LinPEAS: Detectada versão do kernel Linux: 5.4.0
+[+] LinPEAS: Permissões SUID suspeitas em /usr/bin/pkexec
+[+] LinPEAS: Encontrada variável SUDO_ASKPASS manipulável
+[*] Enviando resultados para classificação da IA...
+[+] OpenAI: CVE-2021-4034 (PwnKit) identificado - CRITICIDADE ALTA
+[+] OpenAI: Vulnerabilidade de escalonamento de privilégios local
+[*] Gerando playbook de remediação Ansible...
+[+] Script de patch criado em /tmp/remediation-cve-2021-4034.yml
+[*] Executando verificação de contêineres Docker...
+[+] Encontrados 3 contêineres, analisando configurações...
+[+] Detectada exposição de socket Docker - CRITICIDADE MÉDIA
+[*] Gerando relatório de vulnerabilidades...
+[+] Relatório exportado para S3: urutau-reports/192.168.1.10-05232023.pdf
+[+] Enviando notificação via webhook para Slack e Jira
+[*] Scan concluído. 2 vulnerabilidades críticas, 3 médias, 5 baixas
+[*] Tempo total de execução: 47 segundos
 `;
 
   // Efeito para simular digitação
@@ -65,7 +75,7 @@ uid=0(root) gid=0(root) groups=0(root)
         
         <h2 className="section-title mb-8 flex items-center justify-center gap-3">
           <Terminal className="h-8 w-8 text-secondary" />
-          Simulação de Terminal
+          Execução Automatizada
         </h2>
         
         <div className="card-gradient border-secondary/30 rounded-lg overflow-hidden">
@@ -76,13 +86,13 @@ uid=0(root) gid=0(root) groups=0(root)
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <div className="text-sm text-center flex-1">Urutau Security Terminal</div>
+            <div className="text-sm text-center flex-1">Urutau Security Platform - CLI</div>
           </div>
           
           {/* Corpo do Terminal */}
           <div 
             ref={terminalRef}
-            className="bg-black font-mono text-sm sm:text-base p-4 h-80 overflow-y-auto"
+            className="bg-black font-mono text-sm sm:text-base p-4 h-96 overflow-y-auto"
           >
             <div className="text-green-500">
               {text}

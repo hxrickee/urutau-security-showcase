@@ -12,8 +12,8 @@ const ObjectiveSection = () => {
           <div className="md:w-1/2">
             <h2 className="section-title text-left">Objetivo do Projeto</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              O Urutau Security foi concebido para demonstrar como a inteligência artificial 
-              pode ser aplicada ao campo da segurança ofensiva, criando um sistema capaz de:
+              O Urutau Security foi concebido para revolucionar a forma como as equipes lidam com vulnerabilidades,
+              combinando automação inteligente e análise contextual para:
             </p>
             
             <ul className="space-y-4">
@@ -22,7 +22,7 @@ const ObjectiveSection = () => {
                   <Brain size={20} />
                 </div>
                 <p className="text-muted-foreground">
-                  Automatizar testes de segurança de forma inteligente e adaptativa
+                  Executar automaticamente scripts de segurança (LinPEAS, BeRoot) em ambientes isolados e seguros
                 </p>
               </li>
               <li className="flex items-start">
@@ -30,7 +30,7 @@ const ObjectiveSection = () => {
                   <Target size={20} />
                 </div>
                 <p className="text-muted-foreground">
-                  Facilitar o aprendizado sobre vulnerabilidades em ambientes controlados
+                  Classificar vulnerabilidades com IA e gerar scripts de remediação automatizados
                 </p>
               </li>
               <li className="flex items-start">
@@ -38,7 +38,7 @@ const ObjectiveSection = () => {
                   <ShieldCheck size={20} />
                 </div>
                 <p className="text-muted-foreground">
-                  Servir como ferramenta de pesquisa e desenvolvimento para métodos avançados de detecção de falhas
+                  Fornecer dashboards avançados com heatmaps e tendências para gestão eficiente de riscos
                 </p>
               </li>
             </ul>
@@ -51,11 +51,14 @@ const ObjectiveSection = () => {
                 <div className="text-center p-8">
                   <ShieldCheck size={80} className="mx-auto text-secondary mb-6" />
                   <h3 className="font-poppins font-medium text-2xl text-white mb-4">
-                    Segurança através do conhecimento
+                    MVP Planejado
                   </h3>
-                  <p className="text-muted-foreground">
-                    Transformando pesquisa em proteção através de simulações seguras e controladas
-                  </p>
+                  <ul className="text-left text-muted-foreground space-y-2">
+                    <li>• Execução on-demand de scripts em container Docker</li>
+                    <li>• Dashboard com lista de vulnerabilidades classificadas por IA</li>
+                    <li>• Exportação de relatórios detalhados</li>
+                    <li>• Integração com pipelines de desenvolvimento</li>
+                  </ul>
                 </div>
               </div>
             </div>

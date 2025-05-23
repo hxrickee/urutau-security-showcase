@@ -18,9 +18,9 @@ const AboutSection = () => {
             </div>
             <div>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
-                O <span className="text-secondary font-medium">Urutau Security</span> é uma ferramenta de segurança ofensiva baseada em inteligência artificial. 
-                Ela automatiza ataques controlados em ambientes de teste (como máquinas do VulnHub) para simular 
-                como hackers podem escalar privilégios e obter acesso root.
+                O <span className="text-secondary font-medium">Urutau Security</span> é uma plataforma de automação de análise de vulnerabilidades e pentest baseada em nuvem,
+                que permite a equipes de segurança e DevOps detectar, classificar e remediar falhas de forma contínua e escalável. Integrando IA com
+                ferramentas de segurança tradicionais para transformar o processo de SecOps.
               </p>
             </div>
           </div>
@@ -30,23 +30,28 @@ const AboutSection = () => {
           <div className="card-gradient rounded-lg p-6">
             <div className="flex items-center mb-4">
               <Database className="h-6 w-6 text-secondary mr-3" />
-              <h3 className="font-poppins font-medium text-xl">Automatização Inteligente</h3>
+              <h3 className="font-poppins font-medium text-xl">Problemas Solucionados</h3>
             </div>
-            <p className="text-muted-foreground">
-              O sistema usa a API da OpenAI para analisar vulnerabilidades rapidamente e 
-              tomar decisões em tempo real, eliminando o trabalho manual na fase de reconhecimento.
-            </p>
+            <ul className="text-muted-foreground space-y-2 list-disc pl-5">
+              <li>Redução do tempo gasto por equipes executando scripts manualmente</li>
+              <li>Unificação entre varredura, análise contextual e remediação automatizada</li>
+              <li>Integração de segurança ao pipeline de desenvolvimento ("shift-left")</li>
+              <li>Feedback em tempo real e dashboards unificados para gestão de riscos</li>
+            </ul>
           </div>
           
           <div className="card-gradient rounded-lg p-6">
             <div className="flex items-center mb-4">
               <Shield className="h-6 w-6 text-secondary mr-3" />
-              <h3 className="font-poppins font-medium text-xl">Segurança Controlada</h3>
+              <h3 className="font-poppins font-medium text-xl">Público-Alvo</h3>
             </div>
-            <p className="text-muted-foreground">
-              Projetado exclusivamente para ambientes de teste, o Urutau integra ferramentas 
-              como LinPEAS e BeRoot para identificar e explorar vulnerabilidades em segundos.
-            </p>
+            <ul className="text-muted-foreground space-y-2 list-disc pl-5">
+              <li>Equipes de SecOps / Red Team</li>
+              <li>DevOps / Engenheiros de Confiabilidade (SRE)</li>
+              <li>Gerentes de TI e CISOs</li>
+              <li>Pesquisa e Desenvolvimento em Cibersegurança</li>
+              <li>Auditoria e Compliance</li>
+            </ul>
           </div>
         </div>
       </div>
